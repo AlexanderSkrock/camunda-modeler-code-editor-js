@@ -18,6 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Modal */ "./client/components/Modal.js");
 /* harmony import */ var _hooks_useModeler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hooks/useModeler */ "./client/hooks/useModeler.js");
 /* harmony import */ var _utils_events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/events */ "./client/utils/events.js");
+// eslint-disable-next-line no-unused-vars
 
 
 
@@ -50,7 +51,7 @@ __webpack_require__.r(__webpack_exports__);
   (0,camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (eventBus) {
       eventBus.on(_utils_events__WEBPACK_IMPORTED_MODULE_4__.OPEN_CODE_EDITOR, evt => {
-        if ("JavaScript" === evt.language) {
+        if ('JavaScript' === evt.language) {
           evt.stopPropagation();
           setCodeText(evt.value);
           setCodeEditorOpen(true);
@@ -100,6 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ace_builds_src_noconflict_theme_github__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ace_builds_src_noconflict_theme_github__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var ace_builds_src_noconflict_ext_searchbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ace-builds/src-noconflict/ext-searchbox */ "./node_modules/ace-builds/src-noconflict/ext-searchbox.js");
 /* harmony import */ var ace_builds_src_noconflict_ext_searchbox__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ace_builds_src_noconflict_ext_searchbox__WEBPACK_IMPORTED_MODULE_4__);
+// eslint-disable-next-line no-unused-vars
 
 
 
@@ -132,6 +134,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
 /* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components */ "./node_modules/camunda-modeler-plugin-helpers/components.js");
+// eslint-disable-next-line no-unused-vars
 
 
 const Title = camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__.Modal.Title || (({

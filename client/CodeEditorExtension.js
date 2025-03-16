@@ -1,7 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Fragment, useCallback, useEffect, useMemo, useState } from 'camunda-modeler-plugin-helpers/react';
 
-import JavaScriptCodeEditor from "./components/JavaScriptCodeEditor";
-import Modal from "./components/Modal";
+import JavaScriptCodeEditor from './components/JavaScriptCodeEditor';
+import Modal from './components/Modal';
 import useModeler from './hooks/useModeler';
 import { OPEN_CODE_EDITOR, CLOSE_CODE_EDITOR } from './utils/events';
 
@@ -29,10 +30,10 @@ export default ({ subscribe }) => {
   useEffect(() => {
     if (eventBus) {
       eventBus.on(OPEN_CODE_EDITOR, (evt) => {
-        if ("JavaScript" === evt.language) {
-            evt.stopPropagation();
-            setCodeText(evt.value);
-            setCodeEditorOpen(true);
+        if ('JavaScript' === evt.language) {
+          evt.stopPropagation();
+          setCodeText(evt.value);
+          setCodeEditorOpen(true);
         }
       });
     }
