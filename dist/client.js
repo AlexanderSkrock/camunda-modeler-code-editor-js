@@ -47,31 +47,28 @@ __webpack_require__.r(__webpack_exports__);
     }
     return modeler.get ? modeler.get('eventBus') : modeler._eventBus;
   }, [modeler]);
-  const [element, setElement] = (0,camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.useState)();
   (0,camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (eventBus) {
       eventBus.on(_utils_events__WEBPACK_IMPORTED_MODULE_4__.OPEN_CODE_EDITOR, evt => {
         if ("JavaScript" === evt.language) {
           evt.stopPropagation();
-          setElement(evt.element);
           setCodeText(evt.value);
           setCodeEditorOpen(true);
         }
       });
     }
-  }, [eventBus, setCodeEditorOpen]);
+  }, [eventBus, setCodeEditorOpen, setCodeText]);
   const handleEditorChange = (0,camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(({
     value
   }) => {
     setCodeText(value);
-  }, [eventBus, element]);
+  }, [setCodeText]);
   const handleClose = (0,camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     setCodeEditorOpen(false);
     eventBus.fire(_utils_events__WEBPACK_IMPORTED_MODULE_4__.CLOSE_CODE_EDITOR, {
-      element,
       value: codeText
     });
-  }, [eventBus, element, codeText]);
+  }, [eventBus, codeText, setCodeEditorOpen]);
   return /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, isCodeEditorOpen && /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Code Editor",
     onClose: handleClose
